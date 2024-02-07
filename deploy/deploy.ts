@@ -12,6 +12,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   console.log(`ConfidentialERC20 contract: `, deployed.address);
+
+  const deployed2 = await deploy("IncoSlots", {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
+  console.log(`IncoSlots contract: `, deployed2.address);
 };
 export default func;
 func.id = "deploy_confidentialERC20"; // id required to prevent reexecution

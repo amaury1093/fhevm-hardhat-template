@@ -14,6 +14,7 @@ import "./tasks/accounts";
 import "./tasks/deployERC20";
 import "./tasks/getEthereumAddress";
 import "./tasks/mint";
+import "./tasks/spin";
 
 function getAllSolidityFiles(dir: string, fileList: string[] = []): string[] {
   fs.readdirSync(dir).forEach((file) => {
@@ -66,8 +67,8 @@ function getRemappings() {
 
 const chainIds = {
   zama: 8009,
-  local: 9000,
-  localNetwork1: 9000,
+  local: 9090,
+  localNetwork1: 9090,
   multipleValidatorTestnet: 8009,
 };
 
